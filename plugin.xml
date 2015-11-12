@@ -1,0 +1,48 @@
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"xmlns:android="http://schemas.android.com/apk/res/android"id="com.appue.UrlSaveImagePlugin" version="0.1.0">
+    <name>Url Save Image</name>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <description>This plugin allows you to save an image from a URL to the iOS Photo Library, or Android Gallery from your app.</description>
+    <author>appue - enuobear@gmail.com</author>
+    <keywords>save image,url image,photo library</keywords>
+
+    <license>MIT</license>
+
+    <js-module src="www/UrlSaveImagePlugin.js" name="UrlSaveImagePlugin">
+        <clobbers target="window.urlSaveImagePlugin" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="UrlSaveImagePlugin">
+                <param name="ios-package" value="UrlSaveImagePlugin"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/UrlSaveImagePlugin.h" />
+
+        <source-file src="src/ios/UrlSaveImagePlugin.m" compiler-flags="-fno-objc-arc" />
+    </platform>
+
+    <!-- android -->
+    <platform name="android">
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>
+
+        <config-file target="res/xml/config.xml" parent="/*">
+          <feature name="UrlSaveImagePlugin" >
+            <param name="android-package" value="com.appue.UrlSaveImagePlugin"/>
+          </feature>
+        </config-file>
+
+        <source-file src="src/android/UrlSaveImagePlugin.java" target-dir="src/com/appue/UrlSaveImagePlugin" />
+
+    </platform>
+</plugin>
