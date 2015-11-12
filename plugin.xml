@@ -37,19 +37,19 @@
     </platform>
 
     <!-- android -->
-<!--     <platform name="android">
+    <platform name="android">
+
+        <source-file src="src/android/UrlSaveImagePlugin.java" target-dir="src/com/appue/UrlSaveImagePlugin" />
 
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         </config-file>
 
         <config-file target="res/xml/config.xml" parent="/*">
-          <feature name="UrlSaveImagePlugin" >
-            <param name="android-package" value="com.appue.UrlSaveImagePlugin"/>
-          </feature>
+            <feature name="UrlSaveImagePlugin" >
+                <param name="android-package" value="com.appue.UrlSaveImagePlugin.UrlSaveImagePlugin"/>
+            </feature>
         </config-file>
 
-        <source-file src="src/android/UrlSaveImagePlugin.java" target-dir="src/com/appue/UrlSaveImagePlugin" />
-
-    </platform> -->
+    </platform>
 </plugin>

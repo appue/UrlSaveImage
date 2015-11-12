@@ -5,7 +5,7 @@ This plugin allows you to save an image form a URL to the iOS Photo Library, or 
 - IOS
 - Android
 
-## Install
+## Installation
 cordova plugin add https://github.com/appue/UrlSaveImagePlugin.git
 
 ```
