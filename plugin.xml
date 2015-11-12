@@ -1,4 +1,11 @@
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"xmlns:android="http://schemas.android.com/apk/res/android"id="com.appue.UrlSaveImagePlugin" version="0.1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.appue.saveimage"
+    version="2.0.0-dev"
+>
     <name>Url Save Image</name>
 
     <engines>
@@ -30,7 +37,7 @@
     </platform>
 
     <!-- android -->
-    <platform name="android">
+<!--     <platform name="android">
 
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -44,5 +51,5 @@
 
         <source-file src="src/android/UrlSaveImagePlugin.java" target-dir="src/com/appue/UrlSaveImagePlugin" />
 
-    </platform>
+    </platform> -->
 </plugin>
