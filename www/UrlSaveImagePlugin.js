@@ -15,7 +15,8 @@ module.exports = {
             console.log("UrlSaveImagePlugin Error: failureCallback is not a function");
 
         } else {
-            
+           	var device = new Device(); 
+			console.log(device.getPlatform());
             return cordova.exec(successCallback, failureCallback, "UrlSaveImagePlugin", "saveImage", [url]);
 
         }
