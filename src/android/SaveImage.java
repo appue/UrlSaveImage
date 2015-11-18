@@ -1,4 +1,4 @@
-package com.appue.saveimage;
+package com.appue.SaveImage;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
