@@ -15,11 +15,6 @@ module.exports = {
             console.log("SaveImage Error: failureCallback is not a function");
 
         } else {
-            var device = device;
-
-            console.log(device);
-
-            console.log(device.getPlatform());
             if (type == 2) {
                 var parts = url.split('/'),
                     fileTransfer = new FileTransfer();
