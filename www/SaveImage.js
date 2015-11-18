@@ -4,7 +4,7 @@
 
 module.exports = {
     
-    saveImage:function(url, successCallback, failureCallback, type) {
+    fromUrl:function(url, successCallback, failureCallback, type) {
 
         if (typeof successCallback != "function") {
 
