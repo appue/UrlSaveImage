@@ -4,7 +4,7 @@
     xmlns:rim="http://www.blackberry.com/ns/widgets"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.appue.saveimage"
-    version="2.0.0-dev"
+    version="0.0.1"
 >
     <name>Url Save Image</name>
 
@@ -18,36 +18,36 @@
 
     <license>MIT</license>
 
-    <js-module src="www/UrlSaveImagePlugin.js" name="UrlSaveImagePlugin">
-        <clobbers target="window.urlSaveImagePlugin" />
+    <js-module src="www/SaveImage.js" name="SaveImage">
+        <clobbers target="window.saveImage" />
     </js-module>
 
     <!-- ios -->
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
-            <feature name="UrlSaveImagePlugin">
-                <param name="ios-package" value="UrlSaveImagePlugin"/>
+            <feature name="SaveImage">
+                <param name="ios-package" value="SaveImage"/>
                 <param name="onload" value="true" />
             </feature>
         </config-file>
 
-        <header-file src="src/ios/UrlSaveImagePlugin.h" />
+        <header-file src="src/ios/SaveImage.h" />
 
-        <source-file src="src/ios/UrlSaveImagePlugin.m" compiler-flags="-fno-objc-arc" />
+        <source-file src="src/ios/SaveImage.m" compiler-flags="-fno-objc-arc" />
     </platform>
 
     <!-- android -->
     <platform name="android">
 
-        <source-file src="src/android/UrlSaveImagePlugin.java" target-dir="src/com/appue/UrlSaveImagePlugin" />
+        <source-file src="src/android/SaveImage.java" target-dir="src/com/appue/SaveImage" />
 
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         </config-file>
 
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="UrlSaveImagePlugin" >
-                <param name="android-package" value="com.appue.UrlSaveImagePlugin.UrlSaveImagePlugin"/>
+            <feature name="SaveImage" >
+                <param name="android-package" value="com.appue.SaveImage.SaveImage"/>
             </feature>
         </config-file>
 

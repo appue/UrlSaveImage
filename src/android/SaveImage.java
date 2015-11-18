@@ -1,4 +1,4 @@
-package com.appue.UrlSaveImagePlugin;
+package com.appue.saveimage;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -10,9 +10,9 @@ import android.content.ContentValues;
 import android.provider.MediaStore;
 import android.provider.MediaStore.Images;
 
-public class UrlSaveImagePlugin extends CordovaPlugin {
+public class SaveImage extends CordovaPlugin {
     public boolean execute(String action, final JSONArray args, final CallbackContext callbackContext) throws JSONException {
-        if (action.equals("saveImage")) {
+        if (action.equals("fromUrl")) {
             final String imagePath = args.getString(0);
             cordova.getThreadPool().execute(new Runnable() {
                 public void run() {

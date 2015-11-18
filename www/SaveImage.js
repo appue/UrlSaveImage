@@ -1,5 +1,5 @@
 /**
- * UrlSaveImagePlugin.js
+ * SaveImage.js
  */
 
 module.exports = {
@@ -8,11 +8,11 @@ module.exports = {
 
         if (typeof successCallback != "function") {
 
-            console.log("UrlSaveImagePlugin Error: successCallback is not a function");
+            console.log("SaveImage Error: successCallback is not a function");
 
         } else if (typeof failureCallback != "function") {
           
-            console.log("UrlSaveImagePlugin Error: failureCallback is not a function");
+            console.log("SaveImage Error: failureCallback is not a function");
 
         } else {
             var device = device;
@@ -29,12 +29,12 @@ module.exports = {
                     cordova.file.externalRootDirectory + '/Pictures/' + parts[parts.length - 1],
                     function(entry) {
                         var imagePath = entry.toURL().replace(/^file:\/\//i, '');
-                        return cordova.exec(successCallback, failureCallback, 'UrlSaveImagePlugin', 'saveImage', [imagePath]);
+                        return cordova.exec(successCallback, failureCallback, 'SaveImage', 'fromUrl', [imagePath]);
                     },
                     failureCallback
                 );
             } else {
-                return cordova.exec(successCallback, failureCallback, "UrlSaveImagePlugin", "saveImage", [url]);
+                return cordova.exec(successCallback, failureCallback, "SaveImage", "fromUrl", [url]);
             }
 
         }

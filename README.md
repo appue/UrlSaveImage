@@ -1,4 +1,4 @@
-# UrlSaveImagePlugin
+# SaveImage
 This plugin allows you to save an image form a URL to the iOS Photo Library, or Android Gallery from your app.
 
 ## Supported Platforms
@@ -6,10 +6,10 @@ This plugin allows you to save an image form a URL to the iOS Photo Library, or 
 - Android
 
 ## Installation
-cordova plugin add https://github.com/appue/UrlSaveImagePlugin.git
+cordova plugin add https://github.com/appue/saveimage.git
 
 ```
-window.UrlSaveImagePlugin.saveImage(
+window.saveImage.fromUrl(
 	url,
     function (res) {
       console.log('success');

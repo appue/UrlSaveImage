@@ -1,10 +1,10 @@
 /**
- * UrlSaveImagePlugin.h
+ * SaveImage.h
  */
 
 #import <Cordova/CDV.h>
 
-@interface UrlSaveImagePlugin : CDVPlugin
+@interface SaveImage : CDVPlugin
 {
     NSString* callbackId;
 }

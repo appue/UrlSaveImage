@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/appue/UrlSaveImagePlugin.git"
+    "url": "git+https://github.com/appue/saveimage.git"
   },
   "keywords": [
     "image",
@@ -31,7 +31,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/appue/UrlSaveImagePlugin/issues"
+    "url": "https://github.com/appue/saveimage/issues"
   },
-  "homepage": "https://github.com/appue/UrlSaveImagePlugin#readme"
+  "homepage": "https://github.com/appue/saveimage#readme"
 }

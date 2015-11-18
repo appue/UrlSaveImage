@@ -1,14 +1,14 @@
 /**
- * UrlSaveImagePlugin.m
+ * SaveImage.m
  */
 
-#import "UrlSaveImagePlugin.h"
+#import "SaveImage.h"
 // #import <Cordova/CDV.h>
 
-@implementation UrlSaveImagePlugin
+@implementation SaveImage
 @synthesize callbackId;
 
-- (void) saveImage:(CDVInvokedUrlCommand*)command
+- (void) fromUrl:(CDVInvokedUrlCommand*)command
 {
 	self.callbackId = command.callbackId;
 
